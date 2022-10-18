@@ -1,0 +1,19 @@
+Select ContactName Adi, CustomerName Sehiradi, City Sehir From Customers
+Select * from Customers where City = 'Berlin'
+select * from Products where CategoryId = 1 or categoryId = 3
+select * from Products where CategoryId = 1 and unit >= 10
+select * from Products order by ProductName
+select * from Products order by CategoryId
+select * from Products order by ProductName,CategoryId
+select * from Products order by Price desc
+select * from Products order by Price asc
+select * from Products where CategoryId = 1 order by Price desc
+select count(*) from Products
+select count(*) Adet from Products where CategoryId = 1
+select categoryId ,count(*) from Products group by CategoryId 
+select categoryId,count(*) sayı from Products group by CategoryId having sayı<=10
+select categoryId,count(*) from Products where price > 20 group by CategoryId having count(*) < 10
+select * from Products inner join Categories on Products.CategoryId = Categories.CategoryId
+ select Products.ProductName, Products.ProductId, Products.Price, Categories.CategoryName from Products inner join Categories on Products.CategoryId = Categories.CategoryId where Products.Price > 10
+select * from Products p inner join OrderDetails od on p.ProductId = od.ProductId inner join Orders o on o.OrderId = od.OrderId 
+select * from Customers c left join Orders o on c.CustomerId = o.CustomerId where o.customerId is null
